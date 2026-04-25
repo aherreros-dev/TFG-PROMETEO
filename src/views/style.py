@@ -11,7 +11,7 @@ STYLESHEET = f"""
 QMainWindow, QWidget {{
     background-color: {BG_MAIN};
     color: {TEXT_PRIMARY};
-    font-family: 'Segoe UI', 'SF Pro Display', sans-serif;
+    font-family: 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
     font-size: 13px;
 }}
 
