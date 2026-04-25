@@ -107,7 +107,7 @@ class MainWindow(QMainWindow):
 
         layout.addStretch()
 
-        status = QLabel("v0.1.0  ·  TFG UEMC 2025")
+        status = QLabel("Alejandro Herreros Rueda  ·  2026")
         status.setObjectName("status_bar")
         status.setAlignment(Qt.AlignCenter)
         layout.addWidget(status)
