@@ -2,7 +2,10 @@
   <img src="assets/logo.png" alt="PROMETEO Logo" width="160"/>
 </p>
 
-# PROMETEO — Motor Topoclimático de Predicción de Incendios
+# PROMETEO
+## Predictive Risk Observation & Machine learning Engine for Topoclimatic Emergency Operations
+
+### Motor Topoclimático de Predicción de Incendios
 
 **Trabajo de Fin de Grado · Universidad Europea Miguel de Cervantes (UEMC)**
 Autor: Alejandro Herreros Rueda
