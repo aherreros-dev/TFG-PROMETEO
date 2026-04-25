@@ -1,8 +1,13 @@
+import os
+
 from PySide6.QtWidgets import (
     QMainWindow, QWidget, QHBoxLayout, QVBoxLayout,
     QPushButton, QLabel, QFrame, QStackedWidget,
 )
 from PySide6.QtCore import Qt
+from PySide6.QtGui import QPixmap
+
+ASSETS_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "assets")
 
 from .pages.load_page import LoadPage
 from .pages.preprocess_page import PreprocessPage
@@ -56,13 +61,35 @@ class MainWindow(QMainWindow):
         layout.setContentsMargins(0, 0, 0, 0)
         layout.setSpacing(0)
 
+        # Logo + título en fila
+        header = QWidget()
+        header_layout = QHBoxLayout(header)
+        header_layout.setContentsMargins(16, 20, 16, 4)
+        header_layout.setSpacing(10)
+
+        logo_label = QLabel()
+        logo_path = os.path.join(ASSETS_DIR, "logo.png")
+        pixmap = QPixmap(logo_path).scaled(44, 44, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+        logo_label.setPixmap(pixmap)
+        logo_label.setFixedSize(44, 44)
+
+        text_block = QWidget()
+        text_layout = QVBoxLayout(text_block)
+        text_layout.setContentsMargins(0, 0, 0, 0)
+        text_layout.setSpacing(2)
+
         title = QLabel("PROMETEO")
         title.setObjectName("app_title")
         subtitle = QLabel("PREDICCIÓN DE INCENDIOS")
         subtitle.setObjectName("app_subtitle")
 
-        layout.addWidget(title)
-        layout.addWidget(subtitle)
+        text_layout.addWidget(title)
+        text_layout.addWidget(subtitle)
+
+        header_layout.addWidget(logo_label)
+        header_layout.addWidget(text_block)
+
+        layout.addWidget(header)
 
         sep = QFrame()
         sep.setObjectName("separator")

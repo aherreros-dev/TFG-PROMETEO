@@ -23,17 +23,17 @@ QMainWindow, QWidget {{
 
 #app_title {{
     color: {ACCENT};
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     letter-spacing: 3px;
-    padding: 24px 16px 8px 16px;
+    padding: 0px;
 }}
 
 #app_subtitle {{
     color: {TEXT_MUTED};
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 1px;
-    padding: 0px 16px 24px 16px;
+    padding: 0px;
 }}
 
 /* Nav buttons */
