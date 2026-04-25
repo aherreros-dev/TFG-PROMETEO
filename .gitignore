@@ -7,9 +7,9 @@ __pycache__/
 env/
 venv/
 
-# Datos y modelos (pueden ser grandes o sensibles)
-data/
-models/
+# Datos y modelos entrenados (pueden ser grandes o sensibles)
+/data/
+/models/
 *.csv
 *.xlsx
 *.pkl
